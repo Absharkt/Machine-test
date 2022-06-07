@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="test.css">
+
+</head>
+
+<body>
+
+
+    <div class="container">
+
+        <div id="hour"></div>
+        <div id="minute" ></div>
+        <div id="second" ></div>
+        
+    </div>
+
+
+
+
+    <script>
+        setInterval(function(){
+
+            time = new Date(); 
+            hr = time.getHours();
+            min = time.getMinutes();
+            sec = time.getSeconds();
+
+
+            hr_rot = 30 * hr ;
+            min_rot = 6 * min;
+            sec_rot = 6 * sec;
+
+
+            hour.style.transform = `rotate(${hr_rot}deg)`;
+            minute.style.transform = `rotate(${min_rot}deg)`;
+            second.style.transform = `rotate(${sec_rot}deg)`;
+
+        }, 1000);
+    </script>
+
+
+</body>
+
+</html>
